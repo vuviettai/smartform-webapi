@@ -144,7 +144,6 @@ class FormioResource(Resource):
             if not formio_user_resource_id:
                 collect_user_resource_ids(current_app)
                 formio_user_resource_id = cache.get("user_resource_id")
-
             roles = get_role_ids_from_user_groups(role_ids, user_role)
             if roles is not None:
                 roles.append(
